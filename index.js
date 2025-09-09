@@ -17,8 +17,8 @@ const musics = [
 async function main() {
   try {
     const musicGenerate = await musicGenerator(musics);
-    const musicManage = await musicManagement(musics);
     console.log(musicGenerate);
+    const musicManage = await musicManagement(musics);
     console.log(musicManage);
   } catch (err) {
     console.log(err);
