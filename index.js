@@ -9,9 +9,9 @@ const musics = [
   "Asking Alexandria - Closure",
   "Asking Alexandria - Killing You",
   "Asking Alexandria - Moving On",
-  "Imminence - Heaven Shall Burn",
+  "Avenged Sevenfold - Little Piece of Heaven",
+  "Avenged Sevenfold - Victim",
   "Imminence - The Black",
-  "For Revenge - Penyangkalan",
 ];
 
 musicGenerator(musics);
