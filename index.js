@@ -14,15 +14,5 @@ const musics = [
   "Imminence - The Black",
 ];
 
-async function main() {
-  try {
-    const musicGenerate = await musicGenerator(musics);
-    console.log(musicGenerate);
-    const musicManage = await musicManagement(musics);
-    console.log(musicManage);
-  } catch (err) {
-    console.log(err);
-  }
-}
-
-main();
+musicGenerator(musics);
+musicManagement();
