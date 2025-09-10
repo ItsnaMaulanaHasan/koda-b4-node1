@@ -1,11 +1,14 @@
-import { writeFile } from "node:fs/promises";
+import { writeFile, readdir } from "node:fs/promises";
 import path from "node:path";
 
 export const musicGenerator = async (musics) => {
   try {
+    const dest = path.join("music");
+    const fileMusics = await readdir(dest);
     await musics.forEach(async (music) => {
-      const dest = path.join("music", `${music}.mp3`);
-      await writeFile(dest, "");
+      if (!fileMusics.includes(music)) {
+        await writeFile(path.join(dest, `${music}.mp3`), "");
+      }
     });
     console.log("File musik berhasil digenerate");
   } catch (err) {
