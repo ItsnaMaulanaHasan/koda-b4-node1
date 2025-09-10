@@ -1,13 +1,11 @@
-import { writeFile } from "node:fs";
+import { writeFile } from "node:fs/promises";
 import path from "node:path";
 
 export const musicGenerator = async (musics) => {
   try {
-    await musics.forEach((music) => {
+    await musics.forEach(async (music) => {
       const dest = path.join("music", `${music}.mp3`);
-      writeFile(dest, "", (err) => {
-        if (err) throw err;
-      });
+      await writeFile(dest, "");
     });
     console.log("File musik berhasil digenerate");
   } catch (err) {
