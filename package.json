@@ -4,7 +4,8 @@
   "main": "index.js",
   "type": "module",
   "scripts": {
-    "dev": "node --watch index.js",
+    "dev:async": "node --watch indexAsync.js",
+    "dev:sync": "node --watch indexSync.js",
     "lint": "npx eslint *.js ./**/*.js",
     "lint:fix": "npx eslint *.js ./**/*.js --fix",
     "test": "echo \"Error: no test specified\" && exit 1"
